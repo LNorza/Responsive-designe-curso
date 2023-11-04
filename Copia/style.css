@@ -409,14 +409,25 @@ main {
     color: #757575;
 }
 
+.plans-container-slider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
 .plans-container-card {
     position: relative;
-    width: 70%;
+    scroll-snap-align: center;
+    width: 50%;
     min-width: 230px;
     max-width: 300px;
     height: 250px;
     margin: 50px auto 0;
-    padding: 0 15px;
+    padding: 0 5px;
     background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.15);
@@ -440,7 +451,7 @@ main {
     padding-top: 30px;
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.8rem;
+    line-height: 2rem;
     color: black;
 }
 
@@ -448,7 +459,7 @@ main {
     padding: 5px 0;
     font-size: 5.3rem;
     font-weight: bold;
-    line-height: 5.3rem;
+    line-height: 6.3rem;
     color: black;
 }
 
@@ -461,7 +472,7 @@ main {
 
 .plan-card-saving {
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 1.8rem;
     color: #757575;
 }
 
