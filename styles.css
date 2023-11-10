@@ -7,7 +7,7 @@
     --warm-black: #201e1c;
     --black: #282623;
     --grey: #848282;
-    --off-white: #faf8f7;
+    --off-white: #faf8f8;
     --just-white: #fff;
 }
 
@@ -147,21 +147,45 @@ main {
     margin: 0 auto;
 }
 
-.main-currency-table {
-    width: 70%;
-    min-width: 235px;
-    max-width: 500px;
+.main-tables-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 40px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.main-tables-container::-webkit-scrollbar {
+    background-color: var(--soft-orange);
+    height: 3px;
+}
+.main-tables-container::-webkit-scrollbar-thumb {
+    max-width: 50px;
+    background-color: var(--bitcoin-orange);
+}
+
+.main-currency-table,
+.main-Commissions-table {
+    position: relative;
+    width: 100%;
+    min-width: 290px;
+    max-width: 425px;
     height: 360px;
     margin: 0 auto;
+    scroll-snap-align: center;
     font-family: "Inter", sans-serif;
 }
 
 .main-currency-table .currency-table--title,
 .main-Commissions-table .currency-table--title {
-    margin-bottom: 15px;
+    margin-top: 10px;
     font-size: 1.8rem;
     font-weight: bold;
-    line-height: 1.3rem;
+    line-height: 1.2rem;
     color: var(--bitcoin-orange);
 }
 
@@ -172,10 +196,10 @@ main {
 .currency-table--container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    width: 90%;
+    gap: 1px;
+    width: 100%;
     min-width: 230px;
-    max-width: 300px;
+    max-width: 400px;
     height: 250px;
     margin: 0 auto;
 }
@@ -416,6 +440,7 @@ main {
     gap: 10px;
     height: 316px;
     margin: 0 20px;
+    padding: 0 40px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
